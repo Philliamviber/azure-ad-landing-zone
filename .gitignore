@@ -1,0 +1,25 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Secrets / local vars — never commit
+terraform.tfvars
+*.auto.tfvars
+*.pem
+*.pfx
+
+# Provider lock is committed; override files are not
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

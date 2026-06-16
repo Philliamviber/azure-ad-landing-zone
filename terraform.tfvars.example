@@ -1,0 +1,24 @@
+# terraform.tfvars.example — copy to terraform.tfvars and fill in.
+# terraform.tfvars is gitignored (never commit real subscription/tenant IDs).
+
+subscription_id = "00000000-0000-0000-0000-000000000000"
+tenant_id       = "00000000-0000-0000-0000-000000000000"
+
+org_prefix  = "hlab"
+environment = "prod"
+
+primary_location   = "centralus"
+secondary_location = "canadacentral"
+
+ad_domain_name  = "homelab.local"
+ad_netbios_name = "HOMELAB"
+
+# Cost knobs (defaults are already cost-optimized).
+dc_vm_size        = "Standard_B2ms"
+paw_vm_size       = "Standard_B2s"
+firewall_sku_tier = "Premium" # Premium required for IDPS / deep packet inspection
+
+log_retention_days = 90
+
+# TIGHTEN before prod: restrict Bastion reachability to your operator egress IPs.
+allowed_paw_source_cidrs = ["203.0.113.10/32"]
