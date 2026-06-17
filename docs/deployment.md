@@ -116,7 +116,7 @@ Then set `fileUris` in `modules/domain-controller/main.tf` to the full blob URLs
 ### Step 1 — Init
 
 ```bash
-cd C:\Users\pstib\azure-ad-landing-zone
+cd C:\Users\<username>\azure-ad-landing-zone
 terraform init
 ```
 
